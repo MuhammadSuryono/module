@@ -1,4 +1,4 @@
-module module-okta
+module github.com/MuhammadSuryono/module
 
 go 1.16
 
