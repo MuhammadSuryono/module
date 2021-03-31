@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-var gormDb *gorm.DB
+var GormDb *gorm.DB
 
 func (dbConfig DBConfig) GetConnectionString() string {
 	return fmt.Sprintf(
@@ -29,7 +29,7 @@ func Init(config DBConfig)  {
 	if err != nil {
 		fmt.Println("error ", err)
 	}
-	gormDb = db
+	GormDb = db
 	pingTicker := time.NewTicker(15 * time.Second)
 	pingDone := make(chan bool)
 	go func() {
